@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <dialog id="dialog">
+        <h3>Выберите уровень сложности</h3>
+        <label>
+            <select required id="chooseLevel">
+                <option value="8">Легко</option>
+                <option value="16">Средне</option>
+                <option value="24">Сложно</option>
+            </select>
+        </label>
+        <h3>Введите имя</h3>
+        <label>
+            <input type="text" placeholder="ggmu" id="nickName">
+            <button id="startGame">Начать игру</button>
+        </label>
+    </dialog>
+    <section>
+        <div  class="textBlock" id="timer"></div>
+    </section>
+    <section class="gameSpace" id="gameSpace">
+    </section>
+    <script src="main.js"></script>
+    <section>
+        <div class="textBlock" id="newGame">Новая игра</div>
+    </section>
+    <dialog id="records">
+        <div id="yourScore"></div>
+        <h3>Список рекордов</h3>
+        <button id="startNewGame">Новая игра</button>
+    </dialog>
+</body>
+</html>
