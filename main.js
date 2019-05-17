@@ -65,13 +65,21 @@ function showRecords(_score) {
 
 function initializeRecordTable(records){
     let recordsWindow = document.getElementById('records');
+    try{
+        recordsWindow.close();
+    } catch (e) {
+        console.error(e.message);
+    }
     
     document.getElementById("yourScore").innerHTML = 'Ваше время(' + nickName + '): ' + score;
+    
+    let div = document.getElementById('recordSet');
+    div.innerHTML = "";
     
     for (let i = 0; i < records.length; i++){
         let newRecord = document.createElement('div');
         newRecord.innerHTML = (i+1) + ". " + records[i].name + ": " + records[i].result;
-        recordsWindow.insertBefore(newRecord, recordsWindow.getElementsByTagName('button')[0]);
+        div.appendChild(newRecord);
     }
     
     // client.close();
